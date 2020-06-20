@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Product from "./components/Product";
 import { storeProducts, detailProduct } from "./data";
 
 const ProductContext = React.createContext();
