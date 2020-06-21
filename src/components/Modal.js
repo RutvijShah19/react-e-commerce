@@ -24,6 +24,13 @@ class Modal extends Component {
                       id="modal"
                       className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5"
                     >
+                      <Link to="/">
+                        <i
+                          className="fas fa-window-close fa-lg modal-close"
+                          onClick={() => closeModal()}
+                        />
+                      </Link>
+                      <i />
                       <h5>item added to the cart</h5>
                       <img src={img} alt={title} className="img-fluid" />
                       <div className="text-capitalize mt-3 mb-2">{title}</div>
@@ -66,6 +73,15 @@ const ModalContainer = styled.div`
 
   #modal {
     background: var(--mainWhite);
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    color: var(--lightBlue);
   }
 `;
 
